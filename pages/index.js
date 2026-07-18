@@ -8,12 +8,14 @@ const Home = () => {
   const PHONE_NUMBER = '0599158167';
   const WHATSAPP_URL = `https://wa.me/233599158167`;
 
-  // Generate bundles: 1GB to 100GB at GHS 4.90 per GB
-  const bundles = Array.from({ length: 100 }, (_, i) => ({
-    id: i + 1,
-    size: i + 1,
-    price: (i + 1) * 4.90,
-    name: `${i + 1}GB Data Bundle`,
+  // Custom bundles: 1, 2, 3, 4, 5, 7, 9, 10, 15, 18, 20, 30, 40, 50, 60, 70, 80, 90, 100 GB at GHS 4.90 per GB
+  const bundleSizes = [1, 2, 3, 4, 5, 7, 9, 10, 15, 18, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  
+  const bundles = bundleSizes.map((size, index) => ({
+    id: index + 1,
+    size: size,
+    price: size * 4.90,
+    name: `${size}GB Data Bundle`,
   }));
 
   const handleSelectBundle = (bundle) => {
