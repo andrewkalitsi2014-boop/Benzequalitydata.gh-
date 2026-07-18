@@ -8,11 +8,11 @@ const Home = () => {
   const PHONE_NUMBER = '0599158167';
   const WHATSAPP_URL = `https://wa.me/233599158167`;
 
-  // Generate bundles: 1GB to 100GB at GHS 5 per GB
+  // Generate bundles: 1GB to 100GB at GHS 4.90 per GB
   const bundles = Array.from({ length: 100 }, (_, i) => ({
     id: i + 1,
     size: i + 1,
-    price: (i + 1) * 5,
+    price: (i + 1) * 4.90,
     name: `${i + 1}GB Data Bundle`,
   }));
 
@@ -59,6 +59,7 @@ const Home = () => {
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Data Bundles</h2>
               <p className="text-gray-600 mb-8">Choose your data bundle and get instant access code</p>
+              <p className="text-lg font-semibold text-blue-600">💰 GHS 4.90 per GB</p>
             </div>
 
             {/* Bundles Grid */}
